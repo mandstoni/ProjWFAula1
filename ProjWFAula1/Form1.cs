@@ -44,7 +44,7 @@ namespace ProjWFFerramentas
         {
             return new Ferramentas
             {
-                Id = int.Parse(txtId.Text),
+
                 Descricao = txtDescricao.Text,
                 Tipo = txtTipo.Text,
                 Marca = txtMarca.Text,

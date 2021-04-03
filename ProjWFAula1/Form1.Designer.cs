@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
@@ -44,25 +42,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dGVDados)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(12, 33);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(18, 13);
-            this.lblId.TabIndex = 0;
-            this.lblId.Text = "ID";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(12, 49);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(197, 20);
-            this.txtId.TabIndex = 1;
-            // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(251, 49);
+            this.txtDescricao.Location = new System.Drawing.Point(12, 25);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(207, 20);
             this.txtDescricao.TabIndex = 3;
@@ -70,7 +52,7 @@
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(251, 33);
+            this.lblDescricao.Location = new System.Drawing.Point(9, 9);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(55, 13);
             this.lblDescricao.TabIndex = 2;
@@ -78,7 +60,7 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(251, 102);
+            this.txtMarca.Location = new System.Drawing.Point(12, 112);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(207, 20);
             this.txtMarca.TabIndex = 7;
@@ -86,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(251, 86);
+            this.label2.Location = new System.Drawing.Point(12, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 6;
@@ -94,15 +76,15 @@
             // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(12, 102);
+            this.txtTipo.Location = new System.Drawing.Point(12, 73);
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(197, 20);
+            this.txtTipo.Size = new System.Drawing.Size(207, 20);
             this.txtTipo.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 86);
+            this.label3.Location = new System.Drawing.Point(9, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 4;
@@ -110,15 +92,15 @@
             // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(12, 158);
+            this.txtPreco.Location = new System.Drawing.Point(12, 151);
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(197, 20);
+            this.txtPreco.Size = new System.Drawing.Size(207, 20);
             this.txtPreco.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 140);
+            this.label4.Location = new System.Drawing.Point(12, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 8;
@@ -127,14 +109,14 @@
             // dGVDados
             // 
             this.dGVDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVDados.Location = new System.Drawing.Point(12, 206);
+            this.dGVDados.Location = new System.Drawing.Point(12, 215);
             this.dGVDados.Name = "dGVDados";
-            this.dGVDados.Size = new System.Drawing.Size(446, 150);
+            this.dGVDados.Size = new System.Drawing.Size(216, 141);
             this.dGVDados.TabIndex = 10;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(251, 158);
+            this.btnSalvar.Location = new System.Drawing.Point(12, 186);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(101, 23);
             this.btnSalvar.TabIndex = 11;
@@ -144,7 +126,7 @@
             // 
             // btnGerarTxt
             // 
-            this.btnGerarTxt.Location = new System.Drawing.Point(358, 158);
+            this.btnGerarTxt.Location = new System.Drawing.Point(122, 186);
             this.btnGerarTxt.Name = "btnGerarTxt";
             this.btnGerarTxt.Size = new System.Drawing.Size(100, 23);
             this.btnGerarTxt.TabIndex = 12;
@@ -156,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 368);
+            this.ClientSize = new System.Drawing.Size(242, 372);
             this.Controls.Add(this.btnGerarTxt);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.dGVDados);
@@ -168,8 +150,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblDescricao);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.lblId);
             this.Name = "Form1";
             this.Text = "Ferramentas";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -180,9 +160,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.TextBox txtMarca;

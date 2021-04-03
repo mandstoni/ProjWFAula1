@@ -1,6 +1,7 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,23 +10,49 @@ namespace Dal
 {
     public class FerramentaDB : IFerramentaDB
     {
-        private static List<Ferramentas> lst = new List<Ferramentas>();
+        
 
         public List<Ferramentas> GetAll()
         {
-            var lstOut = new List<Ferramentas>();
+            string sql = Ferramentas.GETALL;
+            List<Ferramentas> lst;
 
-            foreach (var item in lst)
+            using (var connection = new DB())
             {
-                lstOut.Add(item);
+                lst = TransformSQLReaderToList(connection.ExecQueryReturn(sql));
             }
-            return lstOut;
+            return lst;
+        }
+        private List<Ferramentas> TransformSQLReaderToList(SqlDataReader returnData)
+        {
+            var lst = new List<Ferramentas>();
+
+            while (returnData.Read())
+            {
+                var item = new Ferramentas()
+                {
+                    Id = int.Parse(returnData["id"].ToString()),
+                    Descricao = returnData["descricao"].ToString(),
+                    Marca = returnData["Marca"].ToString(),
+                    Tipo = returnData["Tipo"].ToString(),
+                    Preco = returnData["Preco"].ToString(),
+
+                };
+                lst.Add(item);
+            }
+            return lst;
         }
 
         public bool Insert(Ferramentas ferramenta)
         {
-            lst.Add(ferramenta);
-            return true;
+            bool status = false;
+            string sql = string.Format(Ferramentas.INSERT, ferramenta.Descricao, ferramenta.Tipo, ferramenta.Marca, ferramenta.Preco);
+
+            using (var connection = new DB())
+            {
+                status = connection.ExecQuery(sql);
+            }
+            return status;
         }
 
         //Segundo momento:
